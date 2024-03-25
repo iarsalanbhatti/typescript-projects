@@ -1,6 +1,6 @@
 {
-  "name": "ts-number-guessing-game",
-  "version": "1.0.0",
+  "name": "ts-ng-game",
+  "version": "1.0.1",
   "description": "",
   "main": "app.js",
   "type": "module",
