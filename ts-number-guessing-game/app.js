@@ -15,15 +15,15 @@ async function guessTheNum() {
             console.log("Please enter a valid number between 1 and 10.");
         }
         else if (getUserInput.userGuessedNum == randNum) {
-            console.log("Congrats! You guessed the correct number.");
+            console.log("Congratulations! You guessed the correct number.");
             break;
         }
         else {
             allowedAttempts--;
-            console.log(`Wrong guess! You have ${allowedAttempts} attempts left.`);
+            console.log(`Wrong guess! try again`);
         }
         if (allowedAttempts == 0) {
-            console.log(`Sorry, you've run out of attempts. The correct number was ${randNum}.`);
+            console.log(`Sorry, game over better luck next time. The correct number was ${randNum}.`);
         }
     }
 }
