@@ -46,5 +46,5 @@ function calc(inputFirstNumber:number, inputSecondNumber: number) {
     }
     
 }
-let result = calc(getUserInput.userFirstNumber, getUserInput.userSecondNumber)
+let result = calc(getUserInput.userFirstNumber, getUserInput.userSecondNumber);
 console.log(result);
