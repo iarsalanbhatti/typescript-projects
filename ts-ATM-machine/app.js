@@ -20,9 +20,12 @@ async function withdraw() {
     if (userInputWithdrwaAmount.userWithdrawAmount > accountBalance) {
         console.log("Insufficient funds!");
     }
+    else if (userInputWithdrwaAmount.userWithdrawAmount % 500 > 0) {
+        console.log("Please enter the amount in multiples of 500");
+    }
     else {
         accountBalance -= userInputWithdrwaAmount.userWithdrawAmount;
-        console.log(`Withdrawal successful. Remaining balance: Rs${accountBalance}`);
+        console.log(`Withdrawal successful.`);
     }
     nextTransaction();
 }
