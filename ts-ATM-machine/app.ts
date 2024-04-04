@@ -26,12 +26,13 @@ async function withdraw() {
     
   } else if (userInputWithdrwaAmount.userWithdrawAmount % 500 > 0) {
     console.log("Please enter the amount in multiples of 500");
+    withdraw();
   }
   else {
     accountBalance -= userInputWithdrwaAmount.userWithdrawAmount;
     console.log(`Withdrawal successful.`);
+    nextTransaction();
   }
-  nextTransaction();
 }
 
 async function fastCash() {
