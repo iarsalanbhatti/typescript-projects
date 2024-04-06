@@ -3,10 +3,6 @@ import inquirer from "inquirer";
 let myPin = 1212;
 let pinTries = 3;
 let accountBalance = 50000;
-const balancePkrFormat = accountBalance.toLocaleString("en-PK", {
-    style: "currency",
-    currency: "PKR",
-});
 async function checkAccountBalance() {
     console.log(`Your current account balance is Rs${accountBalance}`);
     nextTransaction();
@@ -19,6 +15,7 @@ async function withdraw() {
     });
     if (userInputWithdrwaAmount.userWithdrawAmount > accountBalance) {
         console.log("Insufficient funds!");
+        withdraw();
     }
     else if (userInputWithdrwaAmount.userWithdrawAmount % 500 > 0) {
         console.log("Please enter the amount in multiples of 500");
